@@ -1,0 +1,90 @@
+/** @format */
+
+@use "variables" as *;
+@use "base" as *;
+@use "mixins" as *;
+
+.btn {
+	&--link {
+		text-decoration: none;
+	}
+
+	&--primary {
+		display: block;
+		font-size: $font-large;
+		text-align: center;
+		text-transform: capitalize;
+		border-radius: $btn-border-radius;
+		padding: $btn-padding;
+		font-weight: $btn-font-weight;
+		transition: background-color 0.3s, border 0.3s;
+		color: $white;
+		border: 0.15rem solid $white;
+		background-color: transparent;
+
+		@include rel_center;
+
+		&:hover,
+		&:active {
+			background-color: $white;
+			border: 0.1rem solid $white;
+			color: $teal;
+		}
+
+		&-2 {
+			display: block;
+			font-size: $font-large;
+			text-align: center;
+			text-transform: capitalize;
+			border-radius: $btn-border-radius;
+			padding: $btn-padding;
+			font-weight: $btn-font-weight;
+			transition: background-color 0.3s, border 0.3s;
+			margin-top: 2.5rem;
+			color: $white;
+			border: 0.15rem solid $teal;
+			background-color: $teal;
+
+			@include rel_center;
+
+			&:hover,
+			&:active {
+				background-color: $white;
+				border: 0.1rem solid $teal;
+				color: $teal;
+			}
+		}
+	}
+
+	@-webkit-keyframes moveInTop {
+		0% {
+			opacity: 0;
+			transform: translateY(10rem);
+		}
+
+		80% {
+			transform: translateY(-0.5rem);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translate(0);
+		}
+	}
+
+	@keyframes moveInTop {
+		0% {
+			opacity: 0;
+			transform: translateY(10rem);
+		}
+
+		80% {
+			transform: translateY(-0.5rem);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translate(0);
+		}
+	}
+}

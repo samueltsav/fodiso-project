@@ -1,0 +1,47 @@
+/** @format */
+@use "variables" as *;
+@use "base" as *;
+@use "mixins" as *;
+
+.header {
+	background-image: linear-gradient(rgba($teal, 0.7), rgba($teal, 0.7)),
+		url(../images/wall.jpg);
+	width: auto;
+	background-size: cover;
+	background-position: center;
+	height: 96vh;
+	background-attachment: fixed;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+
+	clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+
+	&--box {
+		@include abs_center;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	&--heading {
+		display: flex;
+		flex-direction: column;
+		color: $white;
+		text-transform: uppercase;
+		width: auto;
+
+		&-main {
+			display: block;
+			font-size: $font-xxlarge;
+			font-weight: 500;
+			letter-spacing: 2rem;
+		}
+
+		&-sub {
+			display: block;
+			font-size: $font-large;
+			font-weight: 500;
+			letter-spacing: 0.2rem;
+			margin-bottom: 5rem;
+		}
+	}
+}

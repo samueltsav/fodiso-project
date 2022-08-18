@@ -1,0 +1,82 @@
+/** @format */
+
+@use "variables" as *;
+@use "base" as *;
+@use "mixins" as *;
+
+.signUp--form,
+.contact--form {
+	background-color: $lightGray;
+	padding: 3rem;
+	position: relative;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	@media only screen and (min-width: 425px) {
+		width: 80%;
+	}
+
+	@media only screen and (min-width: 768px) {
+		width: 50%;
+	}
+}
+
+.form--input {
+	background-color: $white;
+	font-family: inherit;
+	padding: 1rem 2rem;
+	border: 0.2rem solid $silver;
+	display: block;
+	width: 100%;
+
+	border-radius: 0.2rem;
+	-webkit-border-radius: 0.2rem;
+	-moz-border-radius: 0.2rem;
+	-ms-border-radius: 0.2rem;
+	-o-border-radius: 0.2rem;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+
+	&:focus {
+		outline: none;
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+		border-bottom: 0.3rem solid $teal;
+		font-size: $font-large;
+
+		&:invalid {
+			border-bottom: 0.3rem solid $orange;
+		}
+	}
+
+	&::-webkit-input-placeholder {
+		color: $lightGray;
+	}
+
+	&:placeholder-shown + .form--label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-4rem);
+		-webkit-transform: translateY(-4rem);
+		-moz-transform: translateY(-4rem);
+		-ms-transform: translateY(-4rem);
+		-o-transform: translateY(-4rem);
+	}
+}
+
+.form--group {
+	margin-bottom: 1rem;
+}
+
+.form--label {
+	font-weight: 600;
+	display: block;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}

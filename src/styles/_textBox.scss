@@ -1,0 +1,46 @@
+/** @format */
+
+@use "variables" as *;
+@use "base" as *;
+@use "mixins" as *;
+
+.text--box {
+	display: flex;
+	flex-direction: column;
+	height: 45rem;
+	background-color: $white;
+	padding: 2.5rem;
+	margin-top: 1rem;
+	font-size: $font-medium;
+	word-spacing: 0.2rem;
+	text-align: justify;
+	border-radius: 0.3rem;
+	box-shadow: $box-shadow;
+	transition: transform 0.3s;
+	-webkit-transition: transform 0.3s;
+	-moz-transition: transform 0.3s;
+	-ms-transition: transform 0.3s;
+	-o-transition: transform 0.3s;
+
+	&:hover {
+		transform: translateY(-1rem) scale(1);
+	}
+
+	&-icon {
+		font-size: 6rem;
+		color: $teal;
+		align-self: center;
+	}
+
+	&-topline {
+		text-align: center;
+		text-transform: capitalize;
+		color: $teal;
+		font-size: $font-xlarge;
+		margin-bottom: 1.5rem;
+	}
+
+	&-paragraph {
+		font-size: $font-large;
+	}
+}
