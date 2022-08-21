@@ -10,6 +10,17 @@
 	background-color: $darkGray;
 	color: $darkWhite;
 
+	&--contact {
+		display: flex;
+		flex-direction: row;
+
+		&-icon {
+			font-size: 1.5rem;
+			color: $teal;
+			margin-right: 1.5rem;
+		}
+	}
+
 	&--heading {
 		text-transform: capitalize;
 	}

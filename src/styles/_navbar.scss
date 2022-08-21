@@ -37,7 +37,7 @@ ul {
 
 .menu li {
 	font-size: $font-large;
-	padding-right: 1rem;
+	padding-bottom: 1.2rem;
 }
 
 .toggle {
@@ -116,6 +116,11 @@ ul {
 @media all and (min-width: 768px) {
 	.menu {
 		justify-content: center;
+
+		& li {
+			padding-bottom: 0;
+			padding-right: 1.5rem;
+		}
 	}
 
 	.logo {

@@ -1,0 +1,11 @@
+/** @format */
+
+@use "variables" as *;
+@use "base" as *;
+@use "mixins" as *;
+
+.partners--logo {
+	margin-top: 3rem;
+	width: 20vw;
+	@include rel_center;
+}
